@@ -5,15 +5,13 @@
 <!-- AR.js ライブラリの読み込み -->
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
 <body style='margin:0px; overflow:hidden;'>
-<!-- こっからA-Frame -->
 <a-scene embedded arjs="debugUIEnabled:false;trackingMethod:best;" vr-mode-ui="enabled: false">
-<!-- こっからARの世界。マーカー上になにを展開するかを書く -->
-    <a-marker type="pattern" preset="custom" url="marker/ar_mark.patt">
+<!-- AR設定 -->
+    <a-marker type="pattern" preset="custom" url="marker/ar_marker.patt">
         <a-image src="assets/metroid.jpg" position="0 -2 0" rotation="-90 0 0" scale="2 2 2" class="clickable"></a-image>
     </a-marker>
-    <!-- arなのでこんな感じでカメラが必要らしい。 -->
+    <!-- カメラ使用 -->
     <a-entity camera></a-entity>
 </a-scene>
-<!-- ここまででA-Frameおわり -->
 </body>
 </html>
