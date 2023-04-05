@@ -10,6 +10,15 @@
   </head>
   <body style="margin: 0; overflow: hidden;">
     <a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+      <a-assets>
+        <a-asset-item id="sample-obj" src="assets/testobject.obj"></a-asset-item>
+        <a-asset-item id="sample-mtl" src="assets/testobject.mtl"></a-asset-item>
+      </a-assets>
+      <a-obj-model
+        src="#sample-obj"
+        mtl="#sample-mtl"
+        gps-entity-place="latitude: 35.6474420; longitude: 139.73123999;">
+      </a-obj-model>
       <a-text
         value="This content will always face you."
         look-at="[gps-camera]"
